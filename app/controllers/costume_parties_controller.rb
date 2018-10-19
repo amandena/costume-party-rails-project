@@ -1,0 +1,2 @@
+class CostumePartiesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class CostumeParty < ApplicationRecord
+end

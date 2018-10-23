@@ -1,6 +1,6 @@
 class Costume < ApplicationRecord
   has_many :users
-  has_many :costume_parties, through: :users
+  belongs_to :costume_party
 
   def scary?
     if self.scare_rating > 5

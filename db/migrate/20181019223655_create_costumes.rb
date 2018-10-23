@@ -8,6 +8,7 @@ class CreateCostumes < ActiveRecord::Migration[5.2]
       t.string :accessory_2
       t.integer :cost
       t.integer :scare_rating
+      t.integer :costume_party_id
 
       t.timestamps
     end

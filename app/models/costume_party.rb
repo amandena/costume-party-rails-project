@@ -4,7 +4,7 @@ class CostumeParty < ApplicationRecord
 
   def best_costume #method to declare the best costume based on the scare_rating
     self.costumes.each do |costume|
-
+      
     end
   end
 end

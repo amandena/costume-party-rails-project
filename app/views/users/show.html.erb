@@ -1,0 +1,5 @@
+<p>Name: <%= @user.create_username %></p>
+
+<p>Costume(s): <% @user.costumes.each do |costume| %>
+  <%= costume.name %>, <br>
+<% end %></p>

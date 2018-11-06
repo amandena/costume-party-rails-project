@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <% if !logged_in? %>
+        <a href="#">Sign Up</a>
+        <a href="#">Log In</a>
+      <% else %>
+        <a href="#">Log Out</a>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

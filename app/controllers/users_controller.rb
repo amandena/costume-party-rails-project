@@ -22,6 +22,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      redirect_to edit_user_path(@user)
+    end
   end
 
   private

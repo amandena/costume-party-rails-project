@@ -9,9 +9,16 @@ class CostumesController < ApplicationController
   end
 
   def new
+    @attraction = Attraction.new
   end
 
   def create
+    @costume = Costume.new(costume_params)
+    if @costume.save
+      redirect_to @costume
+    else
+      redirect_to new_costume_path
+    end 
   end
 
   def edit

@@ -1,0 +1,27 @@
+<%= form_for @costume do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :clothing_1, "Top" %>
+  <%= f.text_field :clothing_1 %><br>
+
+  <%= f.label :clothing_2, "Bottom" %>
+  <%= f.text_field :clothing_2 %><br>
+
+  <%= f.label :accessory_1, "Accessory" %>
+  <%= f.text_field :accessory_1 %><br>
+
+  <%= f.label :accessory_2, "Accessory" %>
+  <%= f.text_field :accessory_2 %><br>
+
+  <%= f.label :cost, "Total Cost" %>
+  <%= f.text_field :cost %><br>
+
+  <%= f.label :scare_rating, "How scary is it? (1-10 scale)" %>
+  <%= f.text_field :scare_rating %><br>
+
+  <%= f.label :costume_party_id, "Figure out how to incorporate this" %>
+  <%= f.text_field :costume_party_id %><br>
+
+  <%= f.submit %>
+<% end %>

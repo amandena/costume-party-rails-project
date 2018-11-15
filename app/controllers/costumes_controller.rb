@@ -9,7 +9,7 @@ class CostumesController < ApplicationController
   end
 
   def new
-    @attraction = Attraction.new
+    @costume = Costume.new
   end
 
   def create
@@ -18,7 +18,7 @@ class CostumesController < ApplicationController
       redirect_to @costume
     else
       redirect_to new_costume_path
-    end 
+    end
   end
 
   def edit

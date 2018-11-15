@@ -2,6 +2,7 @@ class CostumesController < ApplicationController
   before_action :find_costume, only: [:show, :edit, :update, :destroy]
 
   def index
+    @costumes = Costume.all
   end
 
   def show

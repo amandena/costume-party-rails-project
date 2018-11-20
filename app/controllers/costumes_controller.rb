@@ -25,6 +25,11 @@ class CostumesController < ApplicationController
   end
 
   def update
+    if @costume.update(costume_params)
+      redirect_to @costume
+    else
+      redirect_to edit_costume_path
+    end
   end
 
   def destroy

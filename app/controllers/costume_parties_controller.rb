@@ -1,4 +1,6 @@
 class CostumePartiesController < ApplicationController
+  before_action :find_party, only: [:show, :update, :edit, :destroy]
+
   def index
     @parties = CostumeParty.all
   end
@@ -32,5 +34,9 @@ class CostumePartiesController < ApplicationController
 
   def costume_party_params
     params.require(:costume_party).permit(:name, :date, :time, :user_id)
+  end
+
+  def find_party
+    @party = CostumeParty.find(params[:id])
   end
 end

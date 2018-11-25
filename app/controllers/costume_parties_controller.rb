@@ -15,9 +15,9 @@ class CostumePartiesController < ApplicationController
   def create
     @party = CostumeParty.new(costume_party_params)
     if @party.save
-      redirect_to costume_parties_path(@party)
+      redirect_to @party
     else
-      redirect_to new_costume_parties_path
+      redirect_to new_costume_party_path
     end
   end
 

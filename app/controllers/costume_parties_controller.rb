@@ -21,10 +21,15 @@ class CostumePartiesController < ApplicationController
     end
   end
 
-  def update
+  def edit
   end
 
-  def edit
+  def update
+    if @party.update(costume_party_params)
+      redirect_to @party
+    else
+      redirect_to edit_costume_party_path
+    end
   end
 
   def destroy

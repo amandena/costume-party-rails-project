@@ -33,6 +33,8 @@ class CostumePartiesController < ApplicationController
   end
 
   def destroy
+    @party.destroy
+    redirect_to costume_parties_path
   end
 
   private

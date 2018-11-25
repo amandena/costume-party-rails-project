@@ -1,5 +1,6 @@
 class CostumePartiesController < ApplicationController
   def index
+    @parties = CostumeParty.all
   end
 
   def show

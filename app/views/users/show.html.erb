@@ -1,8 +1,1 @@
 <p>Name: <%= @user.create_username %></p>
-
-<%= binding.pry %>
-<% if !@user.costumes.empty? %>
-  <p>Costume(s): </p><% @user.costumes.each do |costume| %>
-    <p><%= costume.name %>,</p><br>
-  <% end %>
-<% end %>

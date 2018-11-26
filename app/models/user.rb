@@ -9,6 +9,6 @@ class User < ApplicationRecord
 
   def create_username
     username = self.email.split("@")
-    username[0]
+    username[0].capitalize
   end
 end

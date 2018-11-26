@@ -1,9 +1,7 @@
-<h2><%= @costume.name %></h2>
+<h2><%= @costume.name.capitalize %></h2>
 
 <p>Costume Materials: <%= @costume.clothing_1 %>, <%= @costume.clothing_2 %>,
   <%= @costume.accessory_1 %>, <%= @costume.accessory_2 %>
 </p>
-
 <p>Total Cost: $<%= @costume.cost %></p>
 <p>How scary it is on a 1-10 scale: <%= @costume.scare_rating %></p>
-<p><!-- @user's party -->'s Party</p>

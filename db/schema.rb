@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_19_223759) do
+ActiveRecord::Schema.define(version: 2018_11_26_005901) do
 
   create_table "costume_parties", force: :cascade do |t|
     t.string "name"
-    t.date "date"
+    t.string "date"
     t.integer "time"
     t.integer "user_id"
     t.datetime "created_at", null: false

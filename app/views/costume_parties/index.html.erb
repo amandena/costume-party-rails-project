@@ -1,6 +1,6 @@
 <% @parties.each do |party| %>
   <h3><%= party.name %></h3>
-  <p><%= party.time %></p>
+  <p><%= party.time %> p.m.</p>
   <p><%= party.date %></p>
-  <p><%= party.user_id %></p>
+  <p><%= party.user.create_username %>'s Party</p>
 <% end %>

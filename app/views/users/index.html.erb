@@ -1,0 +1,3 @@
+<% @users.each do |user| %>
+  <%= link_to "#{user.create_username}", user_path(user) %>
+<% end %>

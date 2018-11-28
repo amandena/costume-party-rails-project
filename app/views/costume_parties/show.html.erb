@@ -3,3 +3,7 @@
 <p><%= @party.time %> p.m.</p>
 <p><%= @party.date %></p>
 <p><%= @party.user.create_username %>'s party</p>
+
+<%= link_to "Edit Party Details", edit_costume_party_path(@party) %>
+<!--<%= link_to "Delete Party", costume_party_path(@party), method: :delete, data: { confirm: 'Are you sure?' } %>
+-->

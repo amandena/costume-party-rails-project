@@ -4,6 +4,8 @@
 <p><%= @party.date %></p>
 <p><%= @party.user.create_username %>'s party</p>
 
-<%= link_to "Edit Party Details", edit_costume_party_path(@party) %>
+<% if @party.user == current_user %>
+  <%= link_to "Edit Party Details", edit_costume_party_path(@party) %>
+<% end %>
 <!--<%= link_to "Delete Party", costume_party_path(@party), method: :delete, data: { confirm: 'Are you sure?' } %>
 -->

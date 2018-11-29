@@ -1,5 +1,5 @@
 <% @costumes.each do |costume| %>
-  <p><%= link_to "Show #{costume.name} costume", costume_path(costume) %></p>
+  <h4><%= link_to "Show #{costume.name.capitalize} costume", costume_path(costume) %></h4>
 <% end %>
 
 <%= link_to "Create New Costume", new_costume_path %>

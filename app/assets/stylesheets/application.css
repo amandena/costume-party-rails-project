@@ -15,7 +15,11 @@
  */
 body {
   background-color: #E68431;
-  font-family: georgia, serif; 
+  font-family: georgia, serif;
+}
+
+.content {
+  padding-left: 16px;
 }
 
  .center {

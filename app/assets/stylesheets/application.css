@@ -16,6 +16,25 @@
 body {
   background-color: #E68431;
   font-family: georgia, serif;
+  color: #333;
+}
+
+a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+a:hover {
+    color: white;
+}
+
+a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .content {

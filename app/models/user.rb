@@ -3,9 +3,8 @@ class User < ApplicationRecord
   has_many :costumes
   has_many :costume_parties, through: :costumes
 
-  validates :email, presence: { message: "Required field"}
+  validates :email, :password, presence: { message: "Required field"}
   validates :email, uniqueness: { message: "Email already in use, please use another email or sign in"}
-  validates :password, presence: { message: "Required field"}
 
   def create_username
     username = self.email.split("@")

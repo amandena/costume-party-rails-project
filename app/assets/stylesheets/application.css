@@ -41,6 +41,10 @@ a.active {
     color: white;
 }
 
+.error_explanation {
+  color: red;
+}
+
 .content p, h1, h2, h3 {
   padding-left: 16px;
 }

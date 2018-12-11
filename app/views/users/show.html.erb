@@ -1,5 +1,6 @@
 <% if @user == current_user %>
   <h2>Hello, <%= @user.create_username %>!</h2>
+  <%= link_to "BACK", users_path %><br><br>
   <%= link_to "CREATE A NEW COSTUME", new_costume_path %><br><br>
   <%= link_to "CREATE A COSTUME PARTY", new_costume_party_path %><br><br>
   <%= link_to "EDIT USER INFO", edit_user_path %><br><br>

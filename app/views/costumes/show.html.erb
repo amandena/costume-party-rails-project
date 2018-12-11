@@ -7,6 +7,8 @@
 <p>How scary it is on a 1-10 scale: <%= @costume.scare_rating %></p>
 <p>For <%= @costume.costume_party.name %> Party</p>
 
+<%= link_to "BACK", costumes_path %>
+
 <% if @user == current_user %>
   <%= link_to "EDIT COSTUME DETAILS", edit_costume_path(@costume) %>
   <%= link_to "DELETE COSTUME", costume_path(@costume), method: :delete %>

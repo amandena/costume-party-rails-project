@@ -8,6 +8,6 @@
 <p>For <%= @costume.costume_party.name %> Party</p>
 
 <% if @user == current_user %>
-  <%= link_to "Edit Costume Details", edit_costume_path(@costume) %>
-  <%= link_to "Delete Costume", costume_path(@costume), method: :delete %>
+  <%= link_to "EDIT COSTUME DETAILS", edit_costume_path(@costume) %>
+  <%= link_to "DELETE COSTUME", costume_path(@costume), method: :delete %>
 <% end %>

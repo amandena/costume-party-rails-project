@@ -1,10 +1,12 @@
 <h1 align="center">Welcome to the Costume Party!</h1>
 
-<h2 align="center">
-  <%= link_to "Users", users_path %>
-  <%= link_to "Costumes", costumes_path %>
-  <%= link_to "Parties", costume_parties_path %>
-</h2>
+<% if logged_in? %>
+  <h2 align="center">
+    <%= link_to "Users", users_path %>
+    <%= link_to "Costumes", costumes_path %>
+    <%= link_to "Parties", costume_parties_path %>
+  </h2>
+<% end %>
 
 
 <img src="https://images.freeimages.com/images/large-previews/b34/halloween-1554935.jpg" class="center">

@@ -10,4 +10,13 @@ class User < ApplicationRecord
     username = self.email.split("@")
     username[0].capitalize
   end
+
+  def self.from_omniauth(auth)
+    where(uid: auth.uid).first_or_initialize.tap do |user|
+      user.uid = auth.uid
+      user.email = auth.email
+      user.password = auth.password
+      user.save
+    end
+  end
 end

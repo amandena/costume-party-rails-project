@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :users
 
   get '/login', to: 'sessions#new'
-  get '/auth/google/callback', to: 'sessions#create'
+  
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+
   post '/sessions/create', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   delete '/logout', to: 'sessions#destroy'

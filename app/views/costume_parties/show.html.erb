@@ -4,7 +4,7 @@
 <p><%= @party.date %></p>
 <p><%= @party.user.create_username %>'s party</p>
 
-<%= link_to "BACK", costume_parties_path %>
+<%= link_to "VIEW PARTIES", costume_parties_path %>
 
 <% if @party.user == current_user %>
 

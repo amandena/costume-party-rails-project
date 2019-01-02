@@ -19,8 +19,9 @@ class SessionsController < ApplicationController
       #binding.pry
       @user = User.find_or_create_by(uid: auth[:uid]) do |user|
         user.email = auth[:info][:email]
+        user.password = SecureRandom.hex
       end
-      binding.pry
+      #binding.pry
       session[:user_id] = @user.id
       redirect_to @user
     end

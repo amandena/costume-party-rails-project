@@ -9,7 +9,7 @@
 
 <%= link_to "VIEW COSTUMES", costumes_path %>
 
-<% if @user == current_user %>
+<% if @costume.user == current_user %>
   <%= link_to "EDIT COSTUME DETAILS", edit_costume_path(@costume) %>
   <%= link_to "DELETE COSTUME", costume_path(@costume), method: :delete %>
 <% end %>

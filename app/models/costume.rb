@@ -1,5 +1,5 @@
 class Costume < ApplicationRecord
-  has_many :users
+  belongs_to :user
   belongs_to :costume_party
 
   def scary?

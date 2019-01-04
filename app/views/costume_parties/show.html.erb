@@ -7,9 +7,6 @@
 <%= link_to "VIEW PARTIES", costume_parties_path %>
 
 <% if @party.user == current_user %>
-
   <%= link_to "EDIT PARTY DETAILS", edit_costume_party_path(@party) %>
   <%= link_to "DELETE PARTY", costume_party_path(@party), method: :delete %>
 <% end %>
-<!--<%= link_to "Delete Party", costume_party_path(@party), method: :delete, data: { confirm: 'Are you sure?' } %>
--->

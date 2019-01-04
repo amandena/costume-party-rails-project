@@ -7,3 +7,8 @@
 <% else %>
   <h2><%= @user.create_username %>'s Costumes</h2>
 <% end %>
+
+
+  <p>Costume(s): </p><% @user.costumes.each do |costume| %>
+    <p><%= costume.name %>,</p><br>
+  <% end %>

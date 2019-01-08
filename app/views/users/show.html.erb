@@ -8,9 +8,8 @@
   <h2><%= @user.create_username %>'s Costumes</h2>
 <% end %>
 
-
-  <p>Costume(s): </p><% @costumes.each do |costume| %>
-    <% if costume.user_id == @user.id %>
-      <li><%= costume.name %></li>
-    <% end %>
+<% if !@user.costumes.empty? %>
+  <p>Costume(s): </p><% @user.costumes.each do |costume| %>
+    <li><%= costume.name %></li>
   <% end %>
+<% end %>

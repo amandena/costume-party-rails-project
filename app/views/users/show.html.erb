@@ -9,6 +9,8 @@
 <% end %>
 
 
-  <p>Costume(s): </p><% @user.costumes.each do |costume| %>
-    <p><%= costume.name %>,</p><br>
+  <p>Costume(s): </p><% @costumes.each do |costume| %>
+    <% if costume.user_id == @user.id %>
+      <li><%= costume.name %></li>
+    <% end %>
   <% end %>

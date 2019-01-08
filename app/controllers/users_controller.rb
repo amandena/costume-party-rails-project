@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def show
     #binding.pry
+    @costumes = Costume.all
   end
 
   def edit

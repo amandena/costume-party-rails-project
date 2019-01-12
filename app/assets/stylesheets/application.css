@@ -41,7 +41,7 @@ a.active {
     color: white;
 }
 
-.error_explanation {
+.error_explanation, .alert {
   color: red;
 }
 

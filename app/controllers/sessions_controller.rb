@@ -9,10 +9,12 @@ class SessionsController < ApplicationController
     #binding.pry
     if params[:user]
       @user = User.find_by(email: params[:user][:email])
+      #binding.pry
       if @user && @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
         redirect_to @user
       else
+        flash[:error] = "You must log in with an email and password."
         render 'new'
       end
     else

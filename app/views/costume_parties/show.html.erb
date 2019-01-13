@@ -4,6 +4,16 @@
 <p><%= @party.date %></p>
 <p><%= @party.user.create_username %>'s party</p>
 
+<h3>Costumes:</h3>
+
+<ul>
+  <% @party.costumes.each do |costume| %>
+    <li><%= link_to "#{costume.name}", costume_path(costume) %></li><br>
+  <% end %>
+</ul>
+
+
+
 <%= link_to "VIEW PARTIES", costume_parties_path %>
 
 <% if @party.user == current_user %>

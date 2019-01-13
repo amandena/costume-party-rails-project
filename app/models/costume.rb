@@ -3,10 +3,10 @@ class Costume < ApplicationRecord
   belongs_to :costume_party
 
   def scary?
-    if self.scare_rating > 7
-      "OH MY GHOST!"
+    if self.scare_rating > 8
+      true
     else
-      "Better luck next year, kid."
+      false
     end
   end
 end

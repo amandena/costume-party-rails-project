@@ -2,7 +2,7 @@
 
 <p><%= @party.time %> p.m.</p>
 <p><%= @party.date %></p>
-<p><%= @party.user.create_username %>'s party</p>
+<p><%= @party.user.create_username %>'s party</p><br>
 
 <h3>Costumes:</h3>
 
@@ -12,6 +12,7 @@
   <% end %>
 </ul>
 
+<h3>Best Costume: <%= @party.best_costume %>!</h3>
 
 
 <%= link_to "VIEW PARTIES", costume_parties_path %>

@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         redirect_to @user
       else
-        flash[:error] = "You must log in with an email and password."
+        flash[:error] = "*You must log in with an email and password.*"
         render 'new'
       end
     else

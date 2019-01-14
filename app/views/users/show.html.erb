@@ -9,7 +9,7 @@
 <% end %>
 
 <% if !@user.costumes.empty? %>
-  <p>Costume(s): </p><% @user.costumes.each do |costume| %>
-    <li><%= costume.name %></li>
+  <h3>Costume(s): </h3><% @user.costumes.each do |costume| %>
+    <li><%= costume.name %></li><br>
   <% end %>
 <% end %>

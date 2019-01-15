@@ -19,7 +19,7 @@ class CostumesController < ApplicationController
     if @costume.save
       redirect_to @costume
     else
-      redirect_to new_costume_path
+      render 'new'
     end
   end
 

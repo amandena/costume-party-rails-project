@@ -7,19 +7,24 @@ class SessionsController < ApplicationController
 
   def create
     #binding.pry
-    if params[:user]
+    if params[:user] == nil || params[:user].empty?
+      @user = User.new
+      render 'new'
+    elsif params[:user]
       @user = User.find_by(email: params[:user][:email])
       #binding.pry
       if @user && @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
         redirect_to @user
       else
+        @user = User.new
         flash[:error] = "*You must log in with an email and password.*"
         render 'new'
       end
     else
       #binding.pry
       @user = User.find_or_create_by(uid: auth[:uid]) do |user|
+        #binding.pry
         user.email = auth[:info][:email]
         user.password = SecureRandom.hex
       end

@@ -3,8 +3,6 @@ class CostumeParty < ApplicationRecord
   has_many :costumes
 
   def best_costume
-    self.costumes.find do |costume|
-      costume.scary?
-    end.name.capitalize
+    self.costumes.best_quality?.name.capitalize
   end
 end

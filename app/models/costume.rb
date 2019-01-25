@@ -4,11 +4,7 @@ class Costume < ApplicationRecord
 
   validates :scare_rating, inclusion: {in: 1..10, message: "must be a number between 1-10"}
 
-  def scary?
-    if self.scare_rating > 8
-      true
-    else
-      false
-    end
+  def self.best_quality?
+    self.all.max {|a, b| a.cost <=> b.cost}
   end
 end

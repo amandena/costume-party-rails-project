@@ -10,6 +10,6 @@
 
 <% if !@user.costumes.empty? %>
   <h3>Costume(s): </h3><% @user.costumes.each do |costume| %>
-    <li><%= costume.name %></li><br>
+    <p><%= link_to costume.name, costume_path(costume) %></p><br>
   <% end %>
 <% end %>

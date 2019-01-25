@@ -20,7 +20,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    #binding.pry
     @costumes = Costume.all
   end
 

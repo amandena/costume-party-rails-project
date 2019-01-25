@@ -5,11 +5,11 @@
 </p>
 <p>Total Cost: $<%= @costume.cost %></p>
 <p>How scary it is on a 1-10 scale: <%= @costume.scare_rating %></p>
-<p>For <%= @costume.costume_party.name %> Party</p>
+<p>For <%= @costume.costume_party.name %> Party</p><br>
 
-<%= link_to "VIEW COSTUMES", costumes_path %>
+<%= link_to "VIEW COSTUMES", costumes_path %><br><br>
 
 <% if @costume.user == current_user %>
-  <%= link_to "EDIT COSTUME DETAILS", edit_costume_path(@costume) %>
+  <%= link_to "EDIT COSTUME DETAILS", edit_costume_path(@costume) %><br><br>
   <%= link_to "DELETE COSTUME", costume_path(@costume), method: :delete %>
 <% end %>

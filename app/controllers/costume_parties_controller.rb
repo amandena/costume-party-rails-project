@@ -17,7 +17,7 @@ class CostumePartiesController < ApplicationController
     if @party.save
       redirect_to @party
     else
-      redirect_to new_costume_party_path
+      render 'new'
     end
   end
 

@@ -4,13 +4,14 @@
 <p><%= @party.date %></p>
 <p>Host: <%= @party.user.create_username %></p><br>
 
-<h3>Costumes:</h3>
-<% @party.costumes.each do |costume| %>
-  <p><%= link_to "#{costume.name}", costume_path(costume) %></p><br>
-<% end %><br>
+<% if !@party.costumes.empty? %>
+  <h3>Costumes:</h3>
+  <% @party.costumes.each do |costume| %>
+    <p><%= link_to "#{costume.name}", costume_path(costume) %></p><br>
+  <% end %><br>
 
-
-<h3>Best Costume: <%= @party.best_costume %>!</h3>
+  <h3>Best Costume: <%= @party.best_costume %>!</h3>
+<% end %>
 
 <%= link_to "VIEW PARTIES", costume_parties_path %>
 

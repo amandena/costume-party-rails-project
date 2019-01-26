@@ -1,3 +1,12 @@
 <h1>Create A Party!</h1>
 
+<% if @party.errors.any? %>
+  <div class="error_explanation">
+    <h3><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved: </h3>
+      <% @party.errors.full_messages.each do |error| %>
+        <p>*<%= error %>*</p>
+      <% end %>
+  </div>
+<% end %>
+
 <%= render 'form' %>

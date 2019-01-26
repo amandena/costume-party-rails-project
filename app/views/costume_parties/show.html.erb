@@ -5,12 +5,10 @@
 <p>Host: <%= @party.user.create_username %></p><br>
 
 <h3>Costumes:</h3>
+<% @party.costumes.each do |costume| %>
+  <p><%= link_to "#{costume.name}", costume_path(costume) %></p><br>
+<% end %><br>
 
-<ul>
-  <% @party.costumes.each do |costume| %>
-    <li><%= link_to "#{costume.name}", costume_path(costume) %></li><br>
-  <% end %>
-</ul>
 
 <h3>Best Costume: <%= @party.best_costume %>!</h3>
 

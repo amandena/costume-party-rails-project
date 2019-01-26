@@ -46,6 +46,6 @@ class CostumesController < ApplicationController
   end
 
   def find_costume
-    @costume = Costume.find(params[:id])
+    @costume = Costume.find_by(id: params[:id])
   end
 end

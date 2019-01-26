@@ -6,7 +6,7 @@
 
 <% if !@user.costumes.empty? %>
   <h3>Costume(s): </h3><% @user.costumes.each do |costume| %>
-    <p><%= link_to costume.name, costume_path(costume) %></p><br>
+    <p><%= link_to costume.name, costume_party_costume_path(costume.costume_party, costume) %></p><br>
   <% end %><br><br>
 <% else %>
   <h3>No costumes yet!</h3>
@@ -14,7 +14,7 @@
 
 <% if @user == current_user %>
   <%= link_to "VIEW USERS", users_path %><br><br>
-  <%= link_to "CREATE A NEW COSTUME", new_costume_path %><br><br>
+  <%= link_to "CREATE A NEW COSTUME", new_costume_party_costume_path(@user.costume_parties) %><br><br>
   <%= link_to "CREATE A COSTUME PARTY", new_costume_party_path %><br><br>
   <%= link_to "EDIT USER INFO", edit_user_path %><br><br>
 <% end %>

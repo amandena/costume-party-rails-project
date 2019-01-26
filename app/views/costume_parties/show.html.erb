@@ -13,9 +13,9 @@
   <h3>Best Costume: <%= @party.best_costume %>!</h3>
 <% end %>
 
-<%= link_to "VIEW PARTIES", costume_parties_path %>
+<%= link_to "VIEW PARTIES", costume_parties_path %><br><br>
 
 <% if @party.user == current_user %>
-  <%= link_to "EDIT PARTY DETAILS", edit_costume_party_path(@party) %>
-  <%= link_to "DELETE PARTY", costume_party_path(@party), method: :delete %>
+  <%= link_to "EDIT PARTY DETAILS", edit_costume_party_path(@party) %><br><br>
+  <%= link_to "DELETE PARTY", costume_party_path(@party), method: :delete %><br><br>
 <% end %>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :costumes
   resources :costume_parties do
     resources :costumes, only: [:new, :show]
   end
 
-  resources :costumes, only: [:index, :create, :edit, :update, :destroy]
   resources :users
 
   get '/login', to: 'sessions#new'

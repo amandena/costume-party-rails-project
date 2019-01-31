@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :costume_parties, through: :costumes
 
   validates :email, :password, presence: true
-  validates :email, uniqueness: { message: "Email already in use, please use another email or sign in"}
+  validates :email, uniqueness: { message: "already in use, please use another email or sign in"}
 
   def create_username
     username = self.email.split("@")

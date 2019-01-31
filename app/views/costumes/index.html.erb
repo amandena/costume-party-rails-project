@@ -2,6 +2,4 @@
   <h4><%= link_to "Show #{costume.name.capitalize} costume", costume_party_costume_path(costume.costume_party, costume) %></h4><br>
 <% end %><br>
 
-<% @costumes.find do |costume| %>
-<%= link_to "CREATE NEW COSTUME", new_costume_party_costume_path(costume.costume_party) %>
-<% end %>
+<%= link_to "CREATE NEW COSTUME", new_costume_path %>

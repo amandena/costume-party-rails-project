@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/costumes/scariest', to: 'costumes#scariest'
+
   resources :costumes
   resources :costume_parties do
     resources :costumes, only: [:new, :show]

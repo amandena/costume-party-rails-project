@@ -1,6 +1,7 @@
 class CostumeParty < ApplicationRecord
   belongs_to :user
   has_many :costumes
+  has_many :users, through: :costumes
 
   validates :name, :time, :date, presence: true
 

@@ -1,6 +1,10 @@
 class CostumesController < ApplicationController
   before_action :find_costume, only: [:show, :edit, :update, :destroy]
 
+  def scariest
+    @costume = Costume.scariest
+  end
+
   def index
     @costumes = Costume.all
   end

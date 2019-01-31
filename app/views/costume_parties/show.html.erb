@@ -18,4 +18,5 @@
 <% if @party.user == current_user %>
   <%= link_to "EDIT PARTY DETAILS", edit_costume_party_path(@party) %><br><br>
   <%= link_to "DELETE PARTY", costume_party_path(@party), method: :delete %><br><br>
+  <%= link_to "CREATE A NEW COSTUME", new_costume_party_costume_path(@party) %><br><br>
 <% end %>

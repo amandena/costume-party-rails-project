@@ -8,4 +8,8 @@ class Costume < ApplicationRecord
   def self.best_quality?
     self.all.max {|a, b| a.cost <=> b.cost}
   end
+
+  def self.scariest
+    self.all.max {|a, b| a.cost <=> b.cost}
+  end
 end

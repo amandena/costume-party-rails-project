@@ -14,11 +14,21 @@ class CostumesController < ApplicationController
   end
 
   def new
-    @costume = Costume.new
+    if params[:costume_party_id]
+      @party = CostumeParty.find(params[:costume_party_id])
+      if @party.nil?
+        redirect_to costume_parties_path
+      else
+        @costume = @party.costumes.build(id: params[:id])
+      end
+    else
+      @costume = Costume.new
+    end
   end
 
   def create
-    @costume = Costume.new(costume_params)
+    @party = CostumeParty.find(params[:costume_party_id])
+    @costume = @party.costumes.new(costume_params)
     @costume.user = current_user
     if @costume.save
       redirect_to @costume

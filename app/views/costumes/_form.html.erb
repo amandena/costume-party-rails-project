@@ -20,6 +20,8 @@
   <%= f.label :scare_rating, "How scary is it? (1-10 scale)" %>
   <%= f.text_field :scare_rating %><br>
 
+  <%= f.hidden_field :costume_party_id %>
+
   <%= f.label :costume_party_id, "Which party are you wearing this to?" %>
   <%= f.collection_select :costume_party_id, CostumeParty.all, :id, :name %><br>
 
